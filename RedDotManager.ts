@@ -74,6 +74,18 @@ export default class RedDotManager {
     }
 
     /**
+     * 设置红点回调
+     * @param path 
+     * @param callback 
+     */
+    public setRedDotCallback(path,callback){
+        let redDot = this.getRedDot(path);
+        if(redDot){
+            redDot.onRedDotChanged(callback);
+        }
+    }
+
+    /**
      * 移除红点回调
      * @param path 
      */
